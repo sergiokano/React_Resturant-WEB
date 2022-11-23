@@ -1,22 +1,40 @@
-import logo from './logo.svg';
+
 import './App.css';
+import Header from './components/Header/Header';
+import Home from './components/Home/Home';
+
 
 function App() {
+  const dishes = [
+    {
+      id:1,
+      name:'plato 1',
+      description:'Este es el plato 1',
+      price:10
+    },
+    {
+      id:2,
+      name:'plato 2',
+      description:'Este es el plato 2',
+      price:20
+    },
+    {
+      id:3,
+      name:'plato 3',
+      description:'Este es el plato 3',
+      price:15
+    }
+  ]
+  
   return (
     <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
+      <header>
         <p>
-          Edit <code>src/App.js</code> and save to reload.
+          <Header className="header-container" />
+          <Home menu={dishes} />
+
         </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
+    
       </header>
     </div>
   );
