@@ -47,6 +47,7 @@ const initialState = {
   const handleSubmit = (event) => {
     event.preventDefault();
     console.log("Sending data..." + data.name + " " + data.phone+ " " + data.date+ " " + data.hour);
+    localStorage.setItem("reserva",JSON.stringify(data))
     clearState();
     setTimeout(() => {
         navigate('/')

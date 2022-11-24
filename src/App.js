@@ -3,6 +3,8 @@ import "./App.css";
 import Header from "./components/Header/Header";
 import Home from "./components/Home/Home";
 import ReserveForm from "./components/Reserve/Reserve";
+import Menu from "./components/Menu/Menu";
+
 // import { useState } from "react";
 
 function App() {
@@ -34,7 +36,8 @@ function App() {
           <BrowserRouter>
             <Header className="header-container" />
             <Routes>
-              <Route path="/" element={<Home menu={dishes} />} />
+              <Route path="/" element={<Home />} />
+              <Route path="/Menu" element={<Menu menu={dishes} />} />
               <Route path="/ReserveForm" element={<ReserveForm />} />
             </Routes>
           </BrowserRouter>
